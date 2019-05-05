@@ -9,10 +9,9 @@ export default class Home extends Component {
       this.state = {
         recipes: []
       }
-      this.getRecipes = this.getRecipes.bind(this)
     }
 
-    async getRecipes(e) {
+    getRecipes = async (e) => {
       e.preventDefault();
       let searchInput = e.target.elements.recipeSearch.value
       let res = await fetch(`https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${API_KEY}&q=${searchInput}`)
