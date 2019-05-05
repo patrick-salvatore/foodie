@@ -20,6 +20,7 @@ export default class Home extends Component {
       console.log(data)
       this.setState({recipes: data.recipes})
     }
+ 
 
   render() {
     return (
