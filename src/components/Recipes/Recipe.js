@@ -14,7 +14,6 @@ class Recipe extends Component {
         let res = await fetch (`https://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=${API_KEY}&q=${title}`)
         let data = await res.json()
         this.setState({display: data.recipes[0]})
-        console.log()
     }
 
   render() {
